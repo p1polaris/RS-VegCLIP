@@ -1,0 +1,66 @@
+{
+  "attribute_descriptors": {
+    "spectral": [
+      "high near-infrared reflectance",
+      "moderate near-infrared reflectance",
+      "low near-infrared reflectance",
+      "strong green reflectance",
+      "typical vegetation reflectance pattern"
+    ],
+    "textural": [
+      "rough canopy texture",
+      "smooth canopy texture",
+      "fine granular texture",
+      "coarse texture",
+      "dense canopy",
+      "sparse canopy"
+    ],
+    "phenological": [
+      "evergreen foliage",
+      "deciduous foliage",
+      "year-round green",
+      "seasonal green",
+      "annual growth",
+      "perennial growth"
+    ],
+    "contextual": [
+      "dense vegetation cover",
+      "sparse vegetation cover",
+      "agricultural field",
+      "natural vegetation",
+      "urban vegetation",
+      "riparian vegetation",
+      "forest canopy",
+      "grassland cover"
+    ]
+  },
+  "template_functions": [
+    "vegetation with {attributes}",
+    "{category} with {attributes}",
+    "remote sensing image of {category} with {attributes}",
+    "a photo of {category} vegetation with {attributes}",
+    "{category} cover characterized by {attributes}"
+  ],
+  "category_descriptions": {
+    "forest": [
+      "forest with high near-infrared reflectance and rough canopy texture",
+      "dense forest with evergreen foliage and complex canopy structure",
+      "forest in remote sensing imagery with typical green spectral signature"
+    ],
+    "farmland": [
+      "farmland with moderate near-infrared reflectance and smooth texture",
+      "agricultural land with seasonal green vegetation and regular patterns",
+      "farmland in remote sensing imagery with cultivated vegetation"
+    ],
+    "grassland": [
+      "grassland with moderate green reflectance and fine texture",
+      "grass cover with herbaceous vegetation and open canopy",
+      "grassland in remote sensing imagery with continuous green cover"
+    ],
+    "shrubland": [
+      "shrubland with moderate near-infrared reflectance and low canopy height",
+      "shrub cover with woody vegetation and sparse canopy",
+      "shrubland in remote sensing imagery with rough texture"
+    ]
+  }
+}

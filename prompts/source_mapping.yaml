@@ -1,0 +1,162 @@
+# Source Dataset Class Mapping for Zero-Shot Protocol
+# All vegetation-related labels from 10 source datasets are mapped to coarse-grained semantic concepts
+
+source_datasets:
+  LoveDA:
+    - original_label: forest
+      mapped_concept: green vegetation
+      note: Retained
+    - original_label: agricultural
+      mapped_concept: green vegetation
+      note: Retained
+
+  AID:
+    - original_label: forest
+      mapped_concept: green vegetation
+      note: Retained
+    - original_label: agricultural
+      mapped_concept: green vegetation
+      note: Retained
+    - original_label: meadow
+      mapped_concept: green vegetation
+      note: Retained
+    - original_label: park
+      mapped_concept: green vegetation
+      note: Retained
+
+  EuroSAT:
+    - original_label: Permanent Crop
+      mapped_concept: green vegetation
+      note: Retained
+    - original_label: Herbaceous Vegetation
+      mapped_concept: green vegetation
+      note: Retained
+    - original_label: Pasture
+      mapped_concept: green vegetation
+      note: Retained
+    - original_label: Forest
+      mapped_concept: green vegetation
+      note: Retained
+    - original_label: Brushland
+      mapped_concept: green vegetation
+      note: Retained
+    - original_label: Agriculture
+      mapped_concept: green vegetation
+      note: Retained
+    - original_label: Annual Crop
+      mapped_concept: green vegetation
+      note: Retained
+
+  MLRSNet:
+    - original_label: forest
+      mapped_concept: green vegetation
+      note: Retained
+    - original_label: grass
+      mapped_concept: green vegetation
+      note: Retained
+    - original_label: farmland
+      mapped_concept: green vegetation
+      note: Retained
+    - original_label: shrub
+      mapped_concept: green vegetation
+      note: Retained
+    - original_label: bush
+      mapped_concept: green vegetation
+      note: Retained
+    - original_label: tree
+      mapped_concept: green vegetation
+      note: Retained
+    - original_label: wetland
+      mapped_concept: green vegetation
+      note: Excluded to avoid ambiguity
+
+  OPTIMAL31:
+    - original_label: agricultural
+      mapped_concept: green vegetation
+      note: Retained
+    - original_label: forest
+      mapped_concept: green vegetation
+      note: Retained
+    - original_label: grass
+      mapped_concept: green vegetation
+      note: Retained
+
+  PatternNet:
+    - original_label: forest
+      mapped_concept: green vegetation
+      note: Retained
+
+  RESISC45:
+    - original_label: agricultural
+      mapped_concept: green vegetation
+      note: Retained
+    - original_label: forest
+      mapped_concept: green vegetation
+      note: Retained
+    - original_label: meadow
+      mapped_concept: green vegetation
+      note: Retained
+    - original_label: shrubland
+      mapped_concept: green vegetation
+      note: Retained
+
+  RSICB128:
+    - original_label: forest
+      mapped_concept: green vegetation
+      note: Retained
+    - original_label: grass
+      mapped_concept: green vegetation
+      note: Retained
+    - original_label: agricultural
+      mapped_concept: green vegetation
+      note: Retained
+    - original_label: shrub
+      mapped_concept: green vegetation
+      note: Retained
+
+  RSICB256:
+    - original_label: forest
+      mapped_concept: green vegetation
+      note: Retained
+    - original_label: grass
+      mapped_concept: green vegetation
+      note: Retained
+    - original_label: agricultural
+      mapped_concept: green vegetation
+      note: Retained
+    - original_label: shrub
+      mapped_concept: green vegetation
+      note: Retained
+
+  WHURS19:
+    - original_label: forest
+      mapped_concept: green vegetation
+      note: Retained
+    - original_label: farmland
+      mapped_concept: green vegetation
+      note: Retained
+    - original_label: grassland
+      mapped_concept: green vegetation
+      note: Retained
+
+# Coarse-grained concepts used in training
+coarse_grained_concepts:
+  - green vegetation
+  - woody plant
+  - herbaceous cover
+  - scrub vegetation
+
+# Test categories (unseen categories in zero-shot protocol)
+test_categories:
+  - forest
+  - farmland
+  - grassland
+  - shrubland
+
+# Mapping rule description
+mapping_rule_description: |
+  All vegetation-related labels from the 10 source datasets are mapped to coarse-grained concepts
+  (e.g., "green vegetation") during feature library construction. Original fine-grained labels
+  (e.g., "forest", "grassland") are not used as category names in the training process.
+  Ambiguous categories (e.g., "wetland") are excluded to prevent semantic leakage.
+  Non-vegetation categories are ignored.

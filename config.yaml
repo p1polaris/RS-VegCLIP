@@ -1,0 +1,43 @@
+# CLIP backbone
+backbone: "ViT-L/14"
+
+# Feature fusion
+fusion:
+  temperature: 1.0
+  gate: 0.5
+  weights:
+    LoveDA: 0.25
+    EuroSAT: 0.20
+    MLRSNet: 0.20
+    AID: 0.15
+    RESISC45: 0.10
+    Others: 0.10
+
+# Superpixel
+superpixel:
+  base_count: 30
+  max_count: 100
+  min_count: 30
+
+# CRF
+crf:
+  spatial_weight: 3.0
+  color_weight: 5.0
+  smoothness_weight: 1.0
+  iterations: 5
+  spatial_kernel: 3.0
+
+# Post-processing
+postprocess:
+  ndvi_threshold: 0.2
+  structural_element: 3
+  min_hole_size: 50
+  min_isolated_region: 30
+  confidence_threshold: 0.15
+
+# Thresholds
+thresholds:
+  base_threshold: 0.25
+  density_threshold: 0.1
+  uncertainty_threshold: 0.5
+  gradient_threshold: 0.3
