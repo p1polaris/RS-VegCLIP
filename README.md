@@ -1,4 +1,4 @@
-# RS-VegCLIP: Progressive boundary optimization for zero-shot fine-grained vegetation classification
+# RS-VegCLIP: A Hybrid Visual-Language Model with progressive boundary optimization for zero-shot vegetation classification
 
 ![RS-VegCLIP Framework](fig1.png)
 
